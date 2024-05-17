@@ -1,0 +1,229 @@
+<div class="main-cotronller">
+    <div class="tieude1" style=" background-color: #3a4bcd; list-style: none;">
+        <div class="container">
+            <nav aria-label="tieude">
+                <ol class="tieude me-auto mb-2 mb-lg-0">
+                    <div>
+                        <li class="tieude-item">
+                            <a href="">Trang chủ / </a>
+                        </li>
+                        <li class="tieude-item">
+                            CNTT/ Admin
+                        </li>
+                    </div>
+                    <!-- <div class="d-flex">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div> -->
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="main-2">
+    <div class="container mt-2 pb-0">
+        <div class="title">
+            <h1>Ngân hàng câu hỏi trắc nghiệm CNTT</h1>
+        </div>
+        <div class="row mt-4">
+            <div class="col-8">
+                <div class="test-list">
+                    <div class="test-item">
+                        <div class="container">
+                            <div class="card card-default" ng-repeat="sub in subjects">
+                                <div class="row justify-content-center align-self-center">
+                                    <div class="col-lg-3 col-md-12 text-center">
+                                        <img ng-src="./images/logos/{{sub.Logo}}" alt="" style="width: 150px;">
+                                    </div>
+                                    <div class="title col-lg-9 clo-md-12 mt-3">
+                                        <h2>{{sub.Quizzs.length}} câu trắc nghiệm về {{sub.Name}}</h2>
+                                        <p>Tài liệu ôn thi {{sub.Quizzs.length}} câu hỏi trắc nghiệm {{sub.Name}} có đáp
+                                            án được
+                                            tracnghiem.net chọn lọc và chia sẻ dưới đây, nhằm giúp các bạn sinh
+                                            viên có thêm tư liệu tham khảo!</p>
+                                        <hr class="dropdown-divider text-black" style="max-width: 98%;">
+                                        <div class="view-detail ">
+                                            <div class="num-exam">
+                                                {{sub.Quizzs.length}} câu
+                                            </div>
+                                            <div class="num-check">
+                                                500 lượt thi
+                                            </div>
+                                            <a href="#!Admin/{{sub.id}}">
+                                                <button type="button" class="btn btn-primary float-end">Xem Chi
+                                                    Tiết</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="card card-default mt-3">
+                                <div class="row justify-content-center align-self-center">
+                                    <div class="col-lg-3 col-md-12 text-center">
+                                        <img src="images/list-test-item2.jpg" alt="" style="width: 150px;">
+                                    </div>
+                                    <div class="title col-lg-9 clo-md-12 mt-3">
+                                        <h2>30 câu trắc nghiệm về Java</h2>
+                                        <p>Tài liệu ôn thi 150 câu hỏi trắc nghiệm Mạng không dây có đáp án được
+                                            tracnghiem.net chọn lọc và chia sẻ dưới đây, nhằm giúp các bạn sinh
+                                            viên có thêm tư liệu tham khảo!</p>
+                                        <hr class="dropdown-divider text-black" style="max-width: 98%;">
+                                        <div class="view-detail ">
+                                            <div class="num-exam">
+                                                30 câu
+                                            </div>
+                                            <div class="num-check">
+                                                500 lượt thi
+                                            </div>
+                                            <a href="">
+                                                <button type="button" class="btn btn-primary float-end">Xem Chi Tiết</button>
+                                            </a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-default mt-3">
+                                <div class="row justify-content-center align-self-center">
+                                    <div class="col-lg-3 col-md-12 text-center">
+                                        <img src="images/list-test-item3.jpg" alt="" style="width: 150px;">
+                                    </div>
+                                    <div class="title col-lg-9 clo-md-12 mt-3">
+                                        <h2>30 câu trắc nghiệm về Java</h2>
+                                        <p>Tài liệu ôn thi 150 câu hỏi trắc nghiệm Mạng không dây có đáp án được
+                                            tracnghiem.net chọn lọc và chia sẻ dưới đây, nhằm giúp các bạn sinh
+                                            viên có thêm tư liệu tham khảo!</p>
+                                        <hr class="dropdown-divider text-black" style="max-width: 98%;">
+                                        <div class="view-detail ">
+                                            <div class="num-exam">
+                                                30 câu
+                                            </div>
+                                            <div class="num-check">
+                                                500 lượt thi
+                                            </div>
+                                            <button type="button" class="btn btn-primary float-end">Xem chi
+                                                tiết</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-default mt-3">
+                                <div class="row justify-content-center align-self-center">
+                                    <div class="col-lg-3 col-md-12 text-center">
+                                        <img src="images/list-test-item4.jpg" alt="" style="width: 150px;">
+                                    </div>
+                                    <div class="title col-lg-9 clo-md-12 mt-3">
+                                        <h2>30 câu trắc nghiệm về Java</h2>
+                                        <p>Tài liệu ôn thi 150 câu hỏi trắc nghiệm Mạng không dây có đáp án được
+                                            tracnghiem.net chọn lọc và chia sẻ dưới đây, nhằm giúp các bạn sinh
+                                            viên có thêm tư liệu tham khảo!</p>
+                                        <hr class="dropdown-divider text-black" style="max-width: 98%;">
+                                        <div class="view-detail ">
+                                            <div class="num-exam">
+                                                30 câu
+                                            </div>
+                                            <div class="num-check">
+                                                500 lượt thi
+                                            </div>
+                                            <button type="button" class="btn btn-primary float-end">Xem chi
+                                                tiết</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-default mt-3">
+                                <div class="row justify-content-center align-self-center">
+                                    <div class="col-lg-3 col-md-12 text-center">
+                                        <img src="images/list-test-item5.jpg" alt="" style="width: 150px;">
+                                    </div>
+                                    <div class="title col-lg-9 clo-md-12 mt-3">
+                                        <h2>30 câu trắc nghiệm về Java</h2>
+                                        <p>Tài liệu ôn thi 150 câu hỏi trắc nghiệm Mạng không dây có đáp án được
+                                            tracnghiem.net chọn lọc và chia sẻ dưới đây, nhằm giúp các bạn sinh
+                                            viên có thêm tư liệu tham khảo!</p>
+                                        <hr class="dropdown-divider text-black" style="max-width: 98%;">
+                                        <div class="view-detail ">
+                                            <div class="num-exam">
+                                                30 câu
+                                            </div>
+                                            <div class="num-check">
+                                                500 lượt thi
+                                            </div>
+                                            <button type="button" class="btn btn-primary float-end">Xem chi
+                                                tiết</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+                <div class="list-group " style="width: 320px; overflow-y:scroll; height: 360px; border: 20px;">
+                    <a href="#" class="list-group-item list-group-item-action active fw-bold text-center"
+                        aria-current="true" style="font-size: 20px;">
+                        Các đề thi khác
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" ng-repeat="sub in subjects">
+                        <div class="title">
+                            {{sub.Quizzs.length}} Câu hỏi trắc nghiệm môn {{sub.Name}}
+                        </div>
+                        <p>
+                            <span class="num-question">{{sub.Quizzs.length}} câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a>
+                    <!-- <a href="#" class="list-group-item list-group-item-action">
+                        <div class="title">
+                            250 Câu hỏi trắc nghiệm Javascript, CSS, HTML có đáp án
+                        </div>
+                        <p>
+                            <span class="num-question">350 câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="title">
+                            350 Câu hỏi trắc nghiệm môn Lập trình mạng
+                        </div>
+                        <p>
+                            <span class="num-question">350 câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="title">
+                            350 Câu hỏi trắc nghiệm môn Lập trình mạng
+                        </div>
+                        <p>
+                            <span class="num-question">350 câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="title">
+                            350 Câu hỏi trắc nghiệm môn Lập trình mạng
+                        </div>
+                        <p>
+                            <span class="num-question">350 câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="title">
+                            350 Câu hỏi trắc nghiệm môn Lập trình mạng
+                        </div>
+                        <p>
+                            <span class="num-question">350 câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

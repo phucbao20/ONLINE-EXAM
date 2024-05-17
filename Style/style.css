@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;600;700;800;900;1000&display=swap');
+
+*{
+    font-family: 'Nunito';
+}
+
+.accout-box a{
+    background: #b2deff;
+    height: 44px;
+    display: inline-block;
+    line-height: 44px;
+    border-radius: 22px;
+    padding-right: 0 !important;
+}
+.accout-box  a span{
+    font-family: "Nunito", sans-serif;
+    font-size: 13px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #065592;
+    padding-left: 10px;
+}
+.im_login{
+    background: url(/images/user-icon.png) no-repeat center #065592 ;
+    float: right;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    margin: 4px 4px 4px 9px;
+}
+.nav-item:hover > a {
+    color:#1b9b05 !important;
+    text-decoration: underline !important; 
+}
+.card{
+    padding: auto;
+    box-shadow: 0 7px 15px 0 rgba(58, 75, 205, .33);
+}
+.card > img{
+    width: 170px;
+    padding-top: 30px;
+}
+.lession-list{
+    height: 485px;
+    background: url(/images/lession1.jpg) center top no-repeat;
+}
+.lession-box{
+    padding-top: 150px;
+    padding-left: 100px;
+}
+.lession-list .lession-box p {
+    margin: 14px 0 30px 0;
+}
+.lession-list2{
+    height: 485px;
+    background: url(/images/lession2.jpg) top no-repeat;
+    background-position-x: 100px;
+    background-position-y: 50px;
+}
+.nen-xanh{
+    background: url(/images/green-rectangle.png) no-repeat top center;
+    background-size: cover;
+    width: 70%;
+    height: 220px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+.smart-testing .nen-xanh img{
+    position: relative;
+    vertical-align: middle center !important;
+    top: 30%;
+}
+.gach-xanh1{
+    position: relative;
+    height: 245px;
+}
+.gach-xanh2{
+    background: url(/images/green-line.png) no-repeat;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+}
+footer{
+    max-height: 100%;
+    background: #3a4bcd;
+}
+footer .footer-logo{
+    margin: 0 auto 39px;
+    display: table;
+    padding-top: 48px;
+}
+footer .footer-nav h4{
+    color: #fc0;
+    font-size: 13px;
+    line-height: 6;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+footer .footer-nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    line-height: 2.5;
+    font-weight: 400;
+    display: block;
+}
+footer .cuoi{
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 500;
+    padding: 37px;
+    text-align: center;
+}
+

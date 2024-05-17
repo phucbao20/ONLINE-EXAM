@@ -1,0 +1,174 @@
+<div class="main-cotronller">
+    <div class="tieude1" style=" background-color: #3a4bcd; list-style: none;">
+        <div class="container">
+            <nav aria-label="tieude">
+                <ol class="tieude">
+                    <li class="tieude-item">
+                        <a href="">Trang chủ / </a>
+                    </li>
+                    <li class="tieude-item">
+                        CNTT /
+                    </li>
+                    <li class="tieude-item">
+                        JAVA
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="main-2">
+    <div class="container mt-2 pb-0">
+        <div class="row mt-4">
+            <div class="col-8">
+                <div class="test-list">
+                    <div class="test-item">
+                        <div class="container">
+                            <div class="card card-default" >
+                                <h1>{{Quizzs.length}} câu trắc nghiệm {{subject.Name}}</h1>
+                                <p>
+                                    Tổng hợp {{Quizzs.length}} câu hỏi trắc nghiệm {{subject.Name}} có đáp án đầy đủ nhằm giúp
+                                    các bạn dễ dàng ôn tập lại toàn bộ các kiến thức. Để ôn tập hiệu quả các bạn
+                                    có thể ôn theo từng phần trong bộ câu hỏi này bằng cách trả lời các câu hỏi
+                                    và xem lại đáp án và lời giải chi tiết. Sau đó các bạn hãy chọn tạo ra đề
+                                    ngẫu nhiên để kiểm tra lại kiến thức đã ôn. Chúc các bạn thành công!
+                                </p>
+                                <div class="detail-question mt-3" style="padding: 10px; min-height: 45px;">
+                                    <div class="row">
+                                        <div class="num-question col-5" style="padding-left: 12px !important;">
+                                            <span style="font-size: 15px;">
+                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                                {{Quizzs.length}} câu
+                                            </span>
+                                        </div>
+                                        <div class="num-check col-6"
+                                            style="padding-right: 12px !important;text-align: right; padding-top: 5px;">
+                                            <span style="font-size: 15px;">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                                567 lượt thi
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="select-content-question mt-4">
+                                    <h3 >
+                                        <b>Chọn hình thức trắc nghiệm</b>
+                                        <span ng-show="arrQuizz">({{arrQuizz.length}}/25 phút)</span>
+                                    </h3>
+                                    <div class="topics">
+                                        <div class="row">
+                                            <div class="radio-controll-box col-4" >
+                                                <input type="radio" class="btn-check" id="btn-check-outlined" name="btn-check-outlined" checked
+                                                    >
+                                                <label class="btn btn-outline-primary"
+                                                    for="btn-check-outlined" ng-click="getQuizz()">Ôn
+                                                    tập từng phần</label><br>
+                                            </div>
+                                            <div class="radio-controll-box col-6">
+                                                <input type="radio" class="btn-check" id="btn-check-outlined_1" name="btn-check-outlined"
+                                                    >
+                                                <label class="btn btn-outline-primary"
+                                                    for="btn-check-outlined_1"  ng-click="randomQuizz()">Trộn để tự động</label><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select-content-question" style="margin-top: 36px;">
+                                        <h3>
+                                            Chọn phần
+                                        </h3>
+                                        <div class="row">
+                                            <div class="col-6" style="margin-bottom: 30px; max-height: 50px;">
+                                                <select class="form-select form-select-lg mb-3"
+                                                    aria-label="Large select example" ng-model="chossePartOfQuizzs" ng-options="chosse for chosse in [1,2,3]" ng-change="getQuizz()">
+                                                    <!-- <option value="1" selected="selected">Phần 1</option> -->
+                                                    <!-- <option value="2">Phần 2</option>
+                                                    <option value="3">Phần 3</option> -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="button mt-3">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12">
+                                                    <button type="button" class="btn btn-warning text-light fw-bold"
+                                                    style="width: 320px; height: 52px;" ng-click="startTest()">Bắt đầu</button>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <button type="button" class="btn btn-primary text-light fw-bold"
+                                                    style="width: 320px; height: 52px;  background: #3a4bcd;">Chia
+                                                    sẻ Facebook</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+                <div class="list-group " style="width: 320px; overflow:scroll; height: 360px; border: 20px;">
+                    <a href="#" class="list-group-item list-group-item-action active fw-bold text-center"
+                        aria-current="true" style="font-size: 20px;  background: #3a4bcd;">
+                        Đề thi nổi bật
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="title">
+                            350 Câu hỏi trắc nghiệm môn Lập trình mạng
+                        </div>
+                        <p>
+                            <span class="num-question">350 câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="title">
+                            250 Câu hỏi trắc nghiệm Javascript, CSS, HTML có đáp án
+                        </div>
+                        <p>
+                            <span class="num-question">350 câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="title">
+                            350 Câu hỏi trắc nghiệm môn Lập trình mạng
+                        </div>
+                        <p>
+                            <span class="num-question">350 câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="title">
+                            350 Câu hỏi trắc nghiệm môn Lập trình mạng
+                        </div>
+                        <p>
+                            <span class="num-question">350 câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="title">
+                            350 Câu hỏi trắc nghiệm môn Lập trình mạng
+                        </div>
+                        <p>
+                            <span class="num-question">350 câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="title">
+                            350 Câu hỏi trắc nghiệm môn Lập trình mạng
+                        </div>
+                        <p>
+                            <span class="num-question">350 câu</span>
+                            <span class="num-attempt">590 lượt xem</span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

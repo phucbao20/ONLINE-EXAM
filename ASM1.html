@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="icon" href="images/checked.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/listtest.css">
+    <link rel="stylesheet" href="Style/login.css">
+    <link rel="stylesheet" href="Style/ChiTiet.css">
+    <link rel="stylesheet" href="Style/singup.css">
+    <link rel="stylesheet" href="Style/style.css">
+    <title>Trắc nghiệm Online - Luyện thi</title>
+
+</head>
+
+<body ng-controller="homeController">
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div ng-style="loginAlertStyle" class="modal-content">
+                <div class="modal-body">
+                    {{errorMessage}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="modal fade" id="TestModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div ng-style="testAlertStyle" class="modal-content">
+                <div class="modal-body">
+                    {{showTest}}
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="tong mt-2">
+        <header class="sticky-top bg-white">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="text-bg-light"><i class="fas fa-list"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 100px;">
+                            <ul class="navbar-nav  mb-2 mb-lg-0"
+                                style="font-size: 13px; font-variant: small-caps !important;">
+                                <li class="nav-item">
+                                    <a class="nav-link active px-2" aria-current="page" href="#!Home">
+                                        <img src="images/trac-nghiem-online.png" alt="">
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item mt-1 px-2">
+                                    <a class="nav-link active text-black " aria-current="page" href="#">
+                                        THI THPTQG
+                                    </a>
+                                </li> -->
+                                <!-- <li class="nav-item mt-1 px-2 ">
+                                    <a class="nav-link text-black" href="#">
+                                        ĐỀ THI KIỂM TRA
+                                    </a>
+                                </li>
+                                <li class="nav-item mt-1 px-2">
+                                    <a class="nav-link text-black" href="#">
+                                        ĐẠI HỌC
+                                    </a>
+                                </li> -->
+                                <li class="nav-item mt-1 px-2">
+                                    <a class="nav-link text-black" href="#">
+                                        ENGLISH TEST
+                                    </a>
+                                </li>
+                                <li class="nav-item mt-1 px-2">
+                                    <a class="nav-link text-black" href="#">
+                                        ĐẠI HỌC
+                                    </a>
+                                </li>
+
+                                <li class="nav-item dropdown mt-1 px-2">
+                                    <a class="nav-link dropdown-toggle text-black" href="#!ListTest">
+                                        IT TEST
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                                        <!-- <li><a class="dropdown-item" href="#">Java</a></li>
+                                        <li><a class="dropdown-item" href="#">Cơ sở dữ liệu</a></li>
+                                        <li><a class="dropdown-item" href="#">Front-end Famework</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Testing</a></li>
+                                        <li><a class="dropdown-item" href="#">PHP cơ bản</a></li> -->
+                                        <div class="d-flex">
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                        </div>
+                                        <div class="d-flex">
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                            <a class="dropdown-item d-inline-block" href="#">PHP cơ bản</a>
+                                        </div>
+
+                                    </ul>
+                                </li>
+                                <li class="nav-item mt-1 px-2">
+                                    <a class="nav-link text-black" href="#!ListTestAdmin">
+                                        ADMIN
+                                    </a>
+                                </li>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="text" placeholder="Search" ng-model ="listSearch.Name">
+                                </form>
+                            </ul>
+                            <div class="accout-box px-3">
+                                <a href="#!Login" style="text-decoration: none;">
+                                    <span style="font-weight: bold !important" ng-hide="isLogin">Đăng nhập</span>
+                                    <span style="font-weight: bold !important" ng-show="isLogin">{{user.name}}</span>
+                                    <i class="im_login"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <ng-view>
+
+        </ng-view>
+
+        <footer class="mt-5">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="container">
+                <hr class="dropdown-divider text-light">
+                <div class="footer-nav ">
+                    <div class="row ">
+                        <div class="col-lg-2 col-md-6">
+                            <h4 style="height: 50px;">Thi THPT QG</h4>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <h4 style="height: 50px;">Đề Kiểm Tra</h4>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <h4 style="height: 50px;">English Test</h4>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <h4 style="height: 50px;">IT Test</h4>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <h4 style="height: 50px;">Đại Học</h4>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                        </div>
+                        <div class="col-lg-2 col-md-6" style="margin-bottom: 21px;">
+                            <h4 style="height: 50px;">Hướng Nghiệp</h4>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                            <a href="">Môn Toán-Văn-Anh</a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="dropdown-divider text-light">
+            </div>
+            <div class="cuoi d-flex justify-content-center" style="height: 170px;">
+                <div style="width: 500px; margin-top: 10px; color: #fff;">
+                    <p style="margin-bottom: 10px;">
+                        <b class="text-black" style="font-weight: 700;">Chịu trách nhiệm nội dung</b>
+                    </p>
+                    <p class="text-black">Lê Nguyễn Phúc Bảo - Giám đốc Công ty TNHH một thành viên </p>
+                </div>
+                <div style="width: 500px; color: #fff;">
+                    <p style="margin-bottom: 10px;">
+                        <b class="text-black" style="font-weight: 700;">Liên Hệ</b>
+                    </p>
+                    <p style="margin-bottom: 10px;" class="text-black">Công viên phần mềm Quang Trung, Quận 12</p>
+                    <p style="margin-bottom: 10px;" class="text-black">Hotline: 0985399049</p>
+                    <p style="margin-bottom: 10px;" class="text-black">
+                        Email:
+                        <a style="text-decoration: none; color: #fff;"
+                            href="mailto:lnpbao15@gmail.com">lnpbao15@gmail.com</a>
+                    </p>
+
+                </div>
+                <p class="text-black mt-4">Copyright &copy; 2023 by ASM1.net</p>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script> -->
+
+        <script>
+            var app = angular.module("myApp", ["ngRoute"]);
+            app.config(function ($routeProvider) {
+                $routeProvider
+                    .when("/Home", {
+                        templateUrl: "Home.html",
+                        controller: 'homeController'
+                    })
+                    .when("/Admin", {
+                        templateUrl: "Admin.html",
+                        // controller: 'AdminController'
+                    })
+                    .when("/Login", {
+                        templateUrl: "Login.html",
+                        controller: 'LoginController'
+                    })
+                    .when("/Singup", {
+                        templateUrl: "Singup.html",
+                    })
+                    .when("/ListTest", {
+                        templateUrl: "ListTest.html",
+                        controller: 'listSubjectsController'
+                    })
+                    .when("/ChitietTest/:subId", {
+                        templateUrl: "ChitietTest.html",
+                        controller: 'chiTietTestController'
+                    })
+                    .when("/Test", {
+                        templateUrl: "Test.html",
+                        controller: 'testTestController'
+                    })
+                    .when("/Admin/:subId", {
+                        templateUrl: "Admin.html",
+                        controller: 'AdminController'
+                    })
+                    .when("/ListTestAdmin", {
+                        templateUrl: "ListTestAdmin.html",
+                        controller: 'listSubjectsController'
+                    }).otherwise({
+                        redirectTo: "/Home"
+                    })
+
+
+            });
+            app.controller("homeController", function ($scope, $http, $rootScope) {
+                // $rootScope.isLogin = true;
+            })
+        </script>
+        <script src="./js/Login.js"></script>
+        <script src="./js/chiTietTest.js"></script>
+        <script src="./js/listSubjects.js"></script>
+        <script src="js/Test.js"></script>
+        <script src="js/listAdmin.js"></script>
+</body>
+
+</html>
